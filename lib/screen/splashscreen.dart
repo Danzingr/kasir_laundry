@@ -43,7 +43,7 @@ class _splashscreenState extends State<splashscreen> {
       body: Center(
         child: Image.asset(
           'images/logoapp.png',
-          width: 300,
+          width: 150,
         ),
       ),
     );
