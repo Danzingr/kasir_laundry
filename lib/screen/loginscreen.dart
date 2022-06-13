@@ -29,7 +29,7 @@ class _loginscreenState extends State<loginscreen> {
                 Padding(
                   padding: const EdgeInsets.only(top: 40),
                   child: Image.asset(
-                    'images/1.jng',
+                    'images/1.jpg',
                     height: 200,
                   ),
                 ),
