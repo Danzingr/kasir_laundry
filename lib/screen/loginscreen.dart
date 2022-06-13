@@ -1,6 +1,7 @@
 import 'dashboard.dart';
-import 'flutter/material.dart';
-import 'hive_flutter/hive_flutter.dart';
+import 'signup.dart';
+import 'package:flutter/material.dart';
+import 'package:hive_flutter/hive_flutter.dart';
 
 class loginscreen extends StatefulWidget {
   const loginscreen({Key? key}) : super(key: key);
@@ -28,7 +29,7 @@ class _loginscreenState extends State<loginscreen> {
                 Padding(
                   padding: const EdgeInsets.only(top: 40),
                   child: Image.asset(
-                    'images/undraw_social_thinking_7ule.png',
+                    'images/1.jng',
                     height: 200,
                   ),
                 ),

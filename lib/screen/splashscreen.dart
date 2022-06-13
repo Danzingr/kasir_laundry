@@ -12,7 +12,7 @@ class splashscreen extends StatefulWidget {
   State<splashscreen> createState() => _splashscreenState();
 }
 
-class _splashscreenState extends State<splashcreen> {
+class _splashscreenState extends State<splashscreen> {
   startTimer() async {
     var duration = Duration(seconds: 5);
     return Timer(duration, () async {
@@ -21,7 +21,7 @@ class _splashscreenState extends State<splashcreen> {
 
       if (sudahLogin ?? false) {
         Navigator.of(context).pushReplacement(
-          MaterialPageRoute(builder: (_) => homescreen()),
+          MaterialPageRoute(builder: (_) => dashboard()),
         );
       } else {
         Navigator.of(context).pushReplacement(

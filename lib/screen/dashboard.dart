@@ -1,6 +1,6 @@
-import 'login_screen.dart';
-import 'flutter/material.dart';
-import 'hive_flutter/hive_flutter.dart';
+import 'loginscreen.dart';
+import 'package:flutter/material.dart';
+import 'package:hive_flutter/hive_flutter.dart';
 
 class dashboard extends StatefulWidget {
   const dashboard({Key? key}) : super(key: key);
