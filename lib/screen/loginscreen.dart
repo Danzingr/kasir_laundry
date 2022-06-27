@@ -1,4 +1,4 @@
-import 'dashboard.dart';
+import 'navbar.dart';
 import 'signup.dart';
 import 'package:flutter/material.dart';
 import 'package:hive_flutter/hive_flutter.dart';
@@ -110,7 +110,7 @@ class _loginscreenState extends State<loginscreen> {
                         )),
                         onPressed: () {
                           if (userNameController.text == user && passwordController.text == pass) {
-                            Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => dashboard()));
+                            Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => navbar()));
                             ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text('Login berhasil!')));
                             var box = Hive.box('userBox');
                             box.put('isLogin', true);
@@ -119,53 +119,6 @@ class _loginscreenState extends State<loginscreen> {
                           }
                         },
                         child: Text('LOG IN')),
-                  ),
-                ),
-                Padding(
-                  padding: const EdgeInsets.only(top: 20),
-                  child: Text(
-                    'Atau hubungkan menggunakan',
-                    style: TextStyle(fontSize: 12, color: Colors.black54),
-                  ),
-                ),
-                Padding(
-                  padding: const EdgeInsets.only(top: 20),
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                    children: [
-                      SizedBox(
-                          height: 40,
-                          width: 130,
-                          child: ElevatedButton.icon(
-                            onPressed: () {
-                              ScaffoldMessenger.of(context).showSnackBar(SnackBar(
-                                content: Text('Fitur dalam pengembangan'),
-                                action: SnackBarAction(label: 'OK', onPressed: () {}),
-                              ));
-                            },
-                            icon: Icon(Icons.facebook),
-                            label: Text('Facebook'),
-                            style: ElevatedButton.styleFrom(
-                              primary: Colors.indigo,
-                            ),
-                          )),
-                      SizedBox(
-                          height: 40,
-                          width: 130,
-                          child: ElevatedButton.icon(
-                            onPressed: () {
-                              ScaffoldMessenger.of(context).showSnackBar(SnackBar(
-                                content: Text('Fitur dalam pengembangan'),
-                                action: SnackBarAction(label: 'OK', onPressed: () {}),
-                              ));
-                            },
-                            icon: Icon(Icons.facebook),
-                            label: Text('Google'),
-                            style: ElevatedButton.styleFrom(
-                              primary: Colors.red[400],
-                            ),
-                          )),
-                    ],
                   ),
                 ),
                 Padding(
