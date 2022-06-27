@@ -1,6 +1,5 @@
-import 'loginscreen.dart';
 import 'package:flutter/material.dart';
-import 'package:hive_flutter/hive_flutter.dart';
+import 'package:flutter_grid_button/flutter_grid_button.dart';
 
 class dashboard extends StatefulWidget {
   const dashboard({Key? key}) : super(key: key);
@@ -10,32 +9,30 @@ class dashboard extends StatefulWidget {
 }
 
 class _dashboardState extends State<dashboard> {
+  int _selectedIndex = 0;
+  static const List<Widget> _screenList = <Widget>[];
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text('Dashboard'),
-      ),
-      body: Stack(
-        children: [
-          Align(
-              alignment: Alignment(0, 0.9),
-              child: SizedBox(
-                  height: 50,
-                  width: 150,
-                  child: ElevatedButton(
-                      style: ElevatedButton.styleFrom(
-                          primary: Colors.red,
-                          shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(10),
-                          )),
-                      onPressed: () {
-                        Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => loginscreen()));
-                        var box = Hive.box('userBox').clear();
-                      },
-                      child: Text('LOG OUT'))))
-        ],
-      ),
-    );
+        appBar: AppBar(
+          title: Text('Dashboard'),
+        ),
+        body: Container(
+            child: SingleChildScrollView(
+                padding: EdgeInsets.symmetric(horizontal: 20, vertical: 20),
+                child: Column(
+                  children: [
+                    Text(
+                      'Welcome',
+                      style: TextStyle(
+                        fontSize: 20,
+                      ),
+                    ),
+                    Text(
+                      'Admin!',
+                      style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+                    )
+                  ],
+                ))));
   }
 }

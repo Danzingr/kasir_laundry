@@ -1,6 +1,5 @@
 import 'dart:async';
-
-import 'dashboard.dart';
+import 'navbar.dart';
 import 'loginscreen.dart';
 import 'package:flutter/material.dart';
 import 'package:hive_flutter/hive_flutter.dart';
@@ -21,7 +20,7 @@ class _splashscreenState extends State<splashscreen> {
 
       if (sudahLogin ?? false) {
         Navigator.of(context).pushReplacement(
-          MaterialPageRoute(builder: (_) => dashboard()),
+          MaterialPageRoute(builder: (_) => navbar()),
         );
       } else {
         Navigator.of(context).pushReplacement(
