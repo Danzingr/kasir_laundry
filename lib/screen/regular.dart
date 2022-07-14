@@ -18,10 +18,10 @@ class _regularState extends State<regular> {
 
   ontotal() {
     setState(() {
-      var input = int.parse(txtinput.text);
-      var input1 = int.parse(txtinput1.text);
-      var input2 = int.parse(txtinput2.text);
-      var input3 = int.parse(txtinput3.text);
+      var input = int.tryParse(txtinput.text) ?? 0;
+      var input1 = int.tryParse(txtinput1.text) ?? 0;
+      var input2 = int.tryParse(txtinput2.text) ?? 0;
+      var input3 = int.tryParse(txtinput3.text) ?? 0;
       var harga = 500 * (input + input1 + input2 + input3);
       total = harga.toString();
     });

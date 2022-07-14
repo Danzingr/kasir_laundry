@@ -1,6 +1,4 @@
-<!DOCTYPE html>
-<html>
-<head>
+<html><head>
   <!--
     If you are serving your web app in a path other than the root, change the
     href value below to reflect the base path you are serving from.
@@ -27,12 +25,37 @@
   <link rel="apple-touch-icon" href="icons/Icon-192.png">
 
   <!-- Favicon -->
-  <link rel="icon" type="image/png" href="favicon.png"/>
+  <link rel="icon" type="image/png" href="favicon.png">
 
   <title>hello_world</title>
   <link rel="manifest" href="manifest.json">
 </head>
 <body>
+  
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-analytics.js"></script>
+  <script>
+      // TODO: Add SDKs for Firebase products that you want to use
+      // https://firebase.google.com/docs/web/setup#available-libraries
+      console.info("Initializing firebase...")
+      // Your web app's Firebase configuration
+      const firebaseConfig = {
+        apiKey: "AIzaSyDlHvs9Q9ZSpulyY6OYeO6nDplw1snmsGI",
+        authDomain: "laundry-ad1ab.firebaseapp.com",
+        projectId: "laundry-ad1ab",
+        storageBucket: "laundry-ad1ab.appspot.com",
+        messagingSenderId: "1045454245119",
+        appId: "1:1045454245119:web:8b61ea3b9b590ebf9650ca",
+      };
+  
+      // Initialize Firebase
+      const app = firebase.initializeApp(firebaseConfig);
+  		firebase.analytics();
+      console.info("App is initialized", app)
+    </script>
+  
+  
   <!-- This script installs service_worker.js to provide PWA functionality to
        application. For more information, see:
        https://developers.google.com/web/fundamentals/primers/service-workers -->
@@ -100,5 +123,6 @@
       loadMainDartJs();
     }
   </script>
-</body>
-</html>
+
+
+</body></html>
