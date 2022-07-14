@@ -8,10 +8,10 @@ void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp(
     options: const FirebaseOptions(
-      apiKey: "AIzaSyDlHvs9Q9ZSpulyY6OYeO6nDplw1snmsGI",
-      appId: "1:1045454245119:web:a119b37fedf0e16a9650ca",
-      messagingSenderId: "1045454245119",
-      projectId: "laundry-ad1ab ",
+      apiKey: "AIzaSyD6G-rMiy2Zw71X7efj9RpNnQZae9v3Hog",
+      appId: "1:557948570837:web:ab224dd0085cebcbde265c",
+      messagingSenderId: "557948570837",
+      projectId: "laundry-3abd6 ",
     ),
   );
   await Hive.initFlutter();
