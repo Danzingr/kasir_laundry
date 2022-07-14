@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_grid_button/flutter_grid_button.dart';
+import 'express.dart';
+import 'regular.dart';
 
 class dashboard extends StatefulWidget {
   const dashboard({Key? key}) : super(key: key);
@@ -14,25 +15,58 @@ class _dashboardState extends State<dashboard> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: AppBar(
-          title: Text('Dashboard'),
-        ),
-        body: Container(
-            child: SingleChildScrollView(
-                padding: EdgeInsets.symmetric(horizontal: 20, vertical: 20),
-                child: Column(
+      appBar: AppBar(
+        title: Text('Dashboard'),
+      ),
+      body: Container(
+          padding: EdgeInsets.symmetric(horizontal: 20, vertical: 20),
+          child: Column(children: [
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Column(
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Text(
-                      'Welcome',
-                      style: TextStyle(
-                        fontSize: 20,
-                      ),
+                      "Welcome,",
+                      style: TextStyle(fontSize: 16, fontWeight: FontWeight.w500, color: Colors.black),
                     ),
                     Text(
-                      'Admin!',
-                      style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+                      "Admin!",
+                      style: TextStyle(fontSize: 22, fontWeight: FontWeight.w500, color: Colors.black),
                     )
                   ],
-                ))));
+                ),
+                Icon(Icons.menu)
+              ],
+            ),
+            SizedBox(height: 40),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: [
+                ButtonBar(
+                  children: <Widget>[
+                    FlatButton(
+                      child: Text('Regular'),
+                      color: Colors.blue,
+                      onPressed: () {
+                        Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => regular()));
+                      },
+                    ),
+                    SizedBox(width: 10),
+                    FlatButton(
+                      child: Text('Express'),
+                      color: Colors.blue,
+                      onPressed: () {
+                        Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => express()));
+                      },
+                    ),
+                  ],
+                )
+              ],
+            ),
+          ])),
+    );
   }
 }
