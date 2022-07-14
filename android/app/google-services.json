@@ -1,0 +1,68 @@
+{
+  "project_info": {
+    "project_number": "1045454245119",
+    "project_id": "laundry-ad1ab",
+    "storage_bucket": "laundry-ad1ab.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1045454245119:android:2b3a1aea03a271c19650ca",
+        "android_client_info": {
+          "package_name": "com.kel3.kasirlaundry"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1045454245119-69kad9svoi1808tf51ls56eg2n26n77j.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBZXXlW190myDl4i_1qALCbbSD6Utl-5I0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1045454245119-69kad9svoi1808tf51ls56eg2n26n77j.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1045454245119:android:d2a5ec0f3641a7249650ca",
+        "android_client_info": {
+          "package_name": "com.kel3.laundry"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1045454245119-69kad9svoi1808tf51ls56eg2n26n77j.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBZXXlW190myDl4i_1qALCbbSD6Utl-5I0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1045454245119-69kad9svoi1808tf51ls56eg2n26n77j.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

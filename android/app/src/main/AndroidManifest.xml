@@ -1,5 +1,5 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.kasirlaundry">
+    package="com.kel3.kasirlaundry">
    <application
         android:label="kasirlaundry"
         android:name="${applicationName}"
