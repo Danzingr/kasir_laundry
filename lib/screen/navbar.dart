@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:laundry/screen/daftar.dart';
-import 'package:laundry/screen/dashboard.dart';
-import 'package:laundry/screen/profile.dart';
+import 'daftar.dart';
+import 'dashboard.dart';
+import 'profile.dart';
 
 class navbar extends StatefulWidget {
   const navbar({Key? key}) : super(key: key);
