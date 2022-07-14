@@ -1,3 +1,4 @@
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'navbar.dart';
 import 'package:flutter/material.dart';
 
@@ -15,20 +16,25 @@ class _regularState extends State<regular> {
   final txtinput3 = TextEditingController();
 
   String total = '';
+  String paket = '';
 
   ontotal() {
     setState(() {
+      var jpaket = 'Reguler';
       var input = int.tryParse(txtinput.text) ?? 0;
       var input1 = int.tryParse(txtinput1.text) ?? 0;
       var input2 = int.tryParse(txtinput2.text) ?? 0;
       var input3 = int.tryParse(txtinput3.text) ?? 0;
       var harga = 500 * (input + input1 + input2 + input3);
       total = harga.toString();
+      paket = jpaket.toString();
     });
   }
 
   @override
   Widget build(BuildContext context) {
+    FirebaseFirestore firestore = FirebaseFirestore.instance;
+    CollectionReference transaksi = firestore.collection('transaksi');
     return Scaffold(
         appBar: AppBar(
           title: Text('Paket Reguler'),
@@ -176,7 +182,20 @@ class _regularState extends State<regular> {
                     height: 50, // <-- Your height
                     child: ElevatedButton(
                       child: Text('Simpan'),
-                      onPressed: () {},
+                      onPressed: () {
+                        transaksi.add({
+                          'paket': paket,
+                          'baju': int.tryParse(txtinput.text) ?? 0,
+                          'celana': int.tryParse(txtinput1.text) ?? 0,
+                          'jaket': int.tryParse(txtinput2.text) ?? 0,
+                          'topi': int.tryParse(txtinput3.text) ?? 0,
+                          'total': total
+                        });
+                        txtinput.text = '';
+                        txtinput1.text = '';
+                        txtinput2.text = '';
+                        txtinput3.text = '';
+                      },
                     ),
                   ),
                 ],
