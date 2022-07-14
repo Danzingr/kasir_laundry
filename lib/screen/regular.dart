@@ -36,193 +36,122 @@ class _regularState extends State<regular> {
           leading: new IconButton(
               icon: new Icon(Icons.arrow_back, color: Colors.white),
               onPressed: () {
-                Navigator.pushReplacement(
-                    context, MaterialPageRoute(builder: (context) => navbar()));
+                Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => navbar()));
               }),
         ),
         body: Container(
             padding: EdgeInsets.symmetric(horizontal: 20, vertical: 20),
             child: Column(children: [
               Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
-                Column(
-                    mainAxisAlignment: MainAxisAlignment.start,
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Row(children: [
-                        Image.asset(
-                          'images/clean.png',
-                          height: 70,
-                        ),
-                        SizedBox(
-                            width: 100,
-                            child: Column(
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              children: [
-                                Text(
-                                  "Baju",
-                                  style: TextStyle(
-                                      fontSize: 20,
-                                      fontWeight: FontWeight.w500,
-                                      color: Colors.black),
-                                ),
-                                SizedBox(height: 10),
-                                Text(
-                                  "Rp500",
-                                  style: TextStyle(
-                                      fontSize: 16,
-                                      fontWeight: FontWeight.w500,
-                                      color: Colors.orange),
-                                )
-                              ],
-                            )),
-                        SizedBox(width: 200),
-                        SizedBox(
-                            width: 50,
-                            height: 50,
-                            child: TextField(
-                                controller: txtinput,
-                                autocorrect: true,
-                                textAlign: TextAlign.center,
-                                decoration: InputDecoration(
-                                    enabledBorder: OutlineInputBorder(
-                                        borderSide: BorderSide(
-                                            width: 3, color: Colors.blue))))),
-                      ]),
-                      Row(children: [
-                        Image.asset(
-                          'images/clean.png',
-                          height: 70,
-                        ),
-                        SizedBox(
-                            width: 100,
-                            child: Column(
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              children: [
-                                Text(
-                                  "Celana",
-                                  style: TextStyle(
-                                      fontSize: 20,
-                                      fontWeight: FontWeight.w500,
-                                      color: Colors.black),
-                                ),
-                                SizedBox(height: 10),
-                                Text(
-                                  "Rp500",
-                                  style: TextStyle(
-                                      fontSize: 16,
-                                      fontWeight: FontWeight.w500,
-                                      color: Colors.orange),
-                                )
-                              ],
-                            )),
-                        SizedBox(width: 200),
-                        SizedBox(
-                            width: 50,
-                            height: 50,
-                            child: TextField(
-                                controller: txtinput1,
-                                autocorrect: true,
-                                textAlign: TextAlign.center,
-                                decoration: InputDecoration(
-                                    enabledBorder: OutlineInputBorder(
-                                        borderSide: BorderSide(
-                                            width: 3, color: Colors.blue))))),
-                      ]),
-                      Row(children: [
-                        Image.asset(
-                          'images/clean.png',
-                          height: 70,
-                        ),
-                        SizedBox(
-                            width: 100,
-                            child: Column(
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              children: [
-                                Text(
-                                  "Jacket",
-                                  style: TextStyle(
-                                      fontSize: 20,
-                                      fontWeight: FontWeight.w500,
-                                      color: Colors.black),
-                                ),
-                                SizedBox(height: 10),
-                                Text(
-                                  "Rp500",
-                                  style: TextStyle(
-                                      fontSize: 16,
-                                      fontWeight: FontWeight.w500,
-                                      color: Colors.orange),
-                                )
-                              ],
-                            )),
-                        SizedBox(width: 200),
-                        SizedBox(
-                            width: 50,
-                            height: 50,
-                            child: TextField(
-                                controller: txtinput2,
-                                autocorrect: true,
-                                textAlign: TextAlign.center,
-                                decoration: InputDecoration(
-                                    enabledBorder: OutlineInputBorder(
-                                        borderSide: BorderSide(
-                                            width: 3, color: Colors.blue))))),
-                      ]),
-                      Row(children: [
-                        Image.asset(
-                          'images/clean.png',
-                          height: 70,
-                        ),
-                        SizedBox(
-                            width: 100,
-                            child: Column(
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              children: [
-                                Text(
-                                  "Topi",
-                                  style: TextStyle(
-                                      fontSize: 20,
-                                      fontWeight: FontWeight.w500,
-                                      color: Colors.black),
-                                ),
-                                SizedBox(height: 10),
-                                Text(
-                                  "Rp500",
-                                  style: TextStyle(
-                                      fontSize: 16,
-                                      fontWeight: FontWeight.w500,
-                                      color: Colors.orange),
-                                )
-                              ],
-                            )),
-                        SizedBox(width: 200),
-                        SizedBox(
-                            width: 50,
-                            height: 50,
-                            child: TextField(
-                                controller: txtinput3,
-                                autocorrect: true,
-                                textAlign: TextAlign.center,
-                                decoration: InputDecoration(
-                                    enabledBorder: OutlineInputBorder(
-                                        borderSide: BorderSide(
-                                            width: 3, color: Colors.blue))))),
-                      ])
-                    ]),
+                Column(mainAxisAlignment: MainAxisAlignment.start, crossAxisAlignment: CrossAxisAlignment.start, children: [
+                  Row(children: [
+                    Image.asset(
+                      'images/clean.png',
+                      height: 70,
+                    ),
+                    SizedBox(
+                        width: 100,
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Text(
+                              "Baju",
+                              style: TextStyle(fontSize: 20, fontWeight: FontWeight.w500, color: Colors.black),
+                            ),
+                            SizedBox(height: 10),
+                            Text(
+                              "Rp500",
+                              style: TextStyle(fontSize: 16, fontWeight: FontWeight.w500, color: Colors.orange),
+                            )
+                          ],
+                        )),
+                    SizedBox(width: 100),
+                    SizedBox(width: 50, height: 50, child: TextField(controller: txtinput, autocorrect: true, textAlign: TextAlign.center, decoration: InputDecoration(enabledBorder: OutlineInputBorder(borderSide: BorderSide(width: 3, color: Colors.blue))))),
+                  ]),
+                  Row(children: [
+                    Image.asset(
+                      'images/clean.png',
+                      height: 70,
+                    ),
+                    SizedBox(
+                        width: 100,
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Text(
+                              "Celana",
+                              style: TextStyle(fontSize: 20, fontWeight: FontWeight.w500, color: Colors.black),
+                            ),
+                            SizedBox(height: 10),
+                            Text(
+                              "Rp500",
+                              style: TextStyle(fontSize: 16, fontWeight: FontWeight.w500, color: Colors.orange),
+                            )
+                          ],
+                        )),
+                    SizedBox(width: 100),
+                    SizedBox(width: 50, height: 50, child: TextField(controller: txtinput1, autocorrect: true, textAlign: TextAlign.center, decoration: InputDecoration(enabledBorder: OutlineInputBorder(borderSide: BorderSide(width: 3, color: Colors.blue))))),
+                  ]),
+                  Row(children: [
+                    Image.asset(
+                      'images/clean.png',
+                      height: 70,
+                    ),
+                    SizedBox(
+                        width: 100,
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Text(
+                              "Jacket",
+                              style: TextStyle(fontSize: 20, fontWeight: FontWeight.w500, color: Colors.black),
+                            ),
+                            SizedBox(height: 10),
+                            Text(
+                              "Rp500",
+                              style: TextStyle(fontSize: 16, fontWeight: FontWeight.w500, color: Colors.orange),
+                            )
+                          ],
+                        )),
+                    SizedBox(width: 100),
+                    SizedBox(width: 50, height: 50, child: TextField(controller: txtinput2, autocorrect: true, textAlign: TextAlign.center, decoration: InputDecoration(enabledBorder: OutlineInputBorder(borderSide: BorderSide(width: 3, color: Colors.blue))))),
+                  ]),
+                  Row(children: [
+                    Image.asset(
+                      'images/clean.png',
+                      height: 70,
+                    ),
+                    SizedBox(
+                        width: 100,
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Text(
+                              "Topi",
+                              style: TextStyle(fontSize: 20, fontWeight: FontWeight.w500, color: Colors.black),
+                            ),
+                            SizedBox(height: 10),
+                            Text(
+                              "Rp500",
+                              style: TextStyle(fontSize: 16, fontWeight: FontWeight.w500, color: Colors.orange),
+                            )
+                          ],
+                        )),
+                    SizedBox(width: 100),
+                    SizedBox(width: 50, height: 50, child: TextField(controller: txtinput3, autocorrect: true, textAlign: TextAlign.center, decoration: InputDecoration(enabledBorder: OutlineInputBorder(borderSide: BorderSide(width: 3, color: Colors.blue))))),
+                  ])
+                ]),
               ]),
               SizedBox(
-                height: 200,
+                height: 100,
               ),
               Row(children: [
                 SizedBox(
-                  width: 200,
+                  width: 100,
                 ),
                 Text(
                   "Total = $total",
-                  style: TextStyle(
-                      fontSize: 20,
-                      fontWeight: FontWeight.w500,
-                      color: Colors.black),
+                  style: TextStyle(fontSize: 20, fontWeight: FontWeight.w500, color: Colors.black),
                 )
               ]),
               SizedBox(
