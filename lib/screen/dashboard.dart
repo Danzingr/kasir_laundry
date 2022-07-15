@@ -1,5 +1,8 @@
+import 'dart:math';
+
 import 'package:flutter/material.dart';
-import 'package:flutter_grid_button/flutter_grid_button.dart';
+import 'express.dart';
+import 'regular.dart';
 
 class dashboard extends StatefulWidget {
   const dashboard({Key? key}) : super(key: key);
@@ -18,21 +21,55 @@ class _dashboardState extends State<dashboard> {
           title: Text('Dashboard'),
         ),
         body: Container(
-            child: SingleChildScrollView(
-                padding: EdgeInsets.symmetric(horizontal: 20, vertical: 20),
-                child: Column(
-                  children: [
-                    Text(
-                      'Welcome',
-                      style: TextStyle(
-                        fontSize: 20,
+            padding: EdgeInsets.symmetric(horizontal: 20, vertical: 20),
+            child: Column(children: [
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Column(
+                    mainAxisAlignment: MainAxisAlignment.start,
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text(
+                        "Welcome,",
+                        style: TextStyle(fontSize: 16, fontWeight: FontWeight.w500, color: Colors.black),
                       ),
+                      Text(
+                        "Admin!",
+                        style: TextStyle(fontSize: 22, fontWeight: FontWeight.w500, color: Colors.black),
+                      )
+                    ],
+                  ),
+                  Icon(Icons.menu)
+                ],
+              ),
+              SizedBox(height: 40),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children: [
+                  SizedBox(
+                    width: 100, // <-- Your width
+                    height: 50, // <-- Your height
+                    child: ElevatedButton(
+                      child: Text('Regular'),
+                      onPressed: () {
+                        Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => regular()));
+                      },
                     ),
-                    Text(
-                      'Admin!',
-                      style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
-                    )
-                  ],
-                ))));
+                  ),
+                  SizedBox(width: 10),
+                  SizedBox(
+                    width: 100, // <-- Your width
+                    height: 50, // <-- Your height
+                    child: ElevatedButton(
+                      child: Text('Express'),
+                      onPressed: () {
+                        Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => express()));
+                      },
+                    ),
+                  ),
+                ],
+              ),
+            ])));
   }
 }

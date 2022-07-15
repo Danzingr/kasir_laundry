@@ -1,0 +1,68 @@
+{
+  "project_info": {
+    "project_number": "557948570837",
+    "project_id": "laundry-3abd6",
+    "storage_bucket": "laundry-3abd6.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:557948570837:android:04f3e86d087b51bede265c",
+        "android_client_info": {
+          "package_name": "com.kel3.kasirlaundry"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "557948570837-vkmttm0mkf4ifvuc7qibk2ssbnu2nj97.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDqASL4rZWiN3r51Xx_EtU7KGCwwUFIx_k"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "557948570837-vkmttm0mkf4ifvuc7qibk2ssbnu2nj97.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:557948570837:android:4b7f9a50c9de4a39de265c",
+        "android_client_info": {
+          "package_name": "com.kel3.laundry"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "557948570837-vkmttm0mkf4ifvuc7qibk2ssbnu2nj97.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDqASL4rZWiN3r51Xx_EtU7KGCwwUFIx_k"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "557948570837-vkmttm0mkf4ifvuc7qibk2ssbnu2nj97.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
